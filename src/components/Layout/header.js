@@ -1,5 +1,6 @@
 import { h } from "preact";
 import { Box } from "../box.js";
+import Navigation from "../Nav/index.js";
 import LogoIcon from "../icons/LogoIcon.js";
 import colors from "../../theme/colors.js";
 
@@ -41,6 +42,7 @@ export default (props) => {
           {props.header}
         </Box>
       </Box>
+      <Navigation />
       <Box class="float-right absolute right-0">
         <ThemeSwitcher displayMode={false} />
       </Box>
