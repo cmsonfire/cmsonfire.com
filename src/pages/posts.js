@@ -7,7 +7,7 @@ export default (props) => (
       as="div"
       class="text-lg bg-primary-900 leading-5 font-medium text-secondary-100 p-4"
     >
-      Garden Posts
+      Posts
     </Box>
     <div class="shadow sm:rounded-lg">
       <ul class="list-disc space-y-2">
