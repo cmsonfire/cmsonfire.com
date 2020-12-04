@@ -1,0 +1,59 @@
+{
+  "name": "cmsonfire.com",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "author": "talves <tony@3alves.com> (@talves)",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf ./.tmp && rm -rf ./public",
+    "start": "NODE_ENV=production yarn gulp",
+    "postinstall": "breadbox --dest public/web_modules",
+    "build:toast": "toast incremental .",
+    "build": "yarn build:css && yarn build:toast",
+    "build:files": "yarn postinstall && yarn cms -m && yarn build",
+    "build:css": "postcss --config commonjs src/index.css -o public/styles.css",
+    "cms": "cmsonfire import garden-posts-demo -o . -c ./cms/config.js -v -F",
+    "cms:env": "cmsonfire import garden-posts-demo -k ./cms/service-account-key.js -o . -c ./cms/config.js -v -F",
+    "cms:key": "cmsonfire import garden-posts-demo -k ./cms/firebase-admin-key.js -o . -c ./cms/config.js -v -F",
+    "export:cms": "cmsonfire export garden-posts-demo -k ./cms/firebase-admin-key.js -c ./cms/config.js"
+  },
+  "dependencies": {
+    "@cmsonfire/cli": "^0.1.2",
+    "@mdx-js/preact": "^1.6.21",
+    "@sector/breadbox": "^0.0.4",
+    "@toastdotdev/mdx": "^0.1.3",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0",
+    "postcss-import": "^13.0.0",
+    "preact": "^10.5.7",
+    "react-helmet": "^6.1.0",
+    "tailwindcss": "^1.9.6",
+    "toast": "^0.3.30"
+  },
+  "snowpack": {
+    "exclude": [
+      "cms/**",
+      "public/**",
+      "gulpfile.js",
+      "stylelint.config.js",
+      "toast.js"
+    ],
+    "installOptions": {
+      "alias": {
+        "react": "preact/compat"
+      }
+    },
+    "knownEntrypoints": [
+      "preact/hooks",
+      "preact"
+    ]
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "execa": "^4.1.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0"
+  }
+}
