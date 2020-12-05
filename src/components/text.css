@@ -5,3 +5,9 @@
   text-shadow: #fff 0 -1px 4px, #f6e05e 0 -4px 10px, #ffa000 0 -14px 20px,
     #ed6c30 0 -20px 30px;
 }
+
+.box-background {
+  background-image: url("/cms-on-fire-emboss.svg");
+  background-size: 80px 90px;
+  background-repeat: repeat;
+}

@@ -1,0 +1,4 @@
+/* page */
+#toast-page-section {
+  @apply min-h-screen;
+}
