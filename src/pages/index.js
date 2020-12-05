@@ -4,7 +4,7 @@ import { Button } from "../components/index.js";
 
 export default (props) => (
   <Box class=" min-h-full">
-    <Box class="flex flex-row py-16 box-background">
+    <Box class="flex flex-row py-16">
       <Box class="flex-col w-1/2">
         <Box class="w-4/5 m-auto bg-fire-200 bg-opacity-50 p-10 shadow-md border-r-4">
           <Box class="text-4xl text-fire-900">
