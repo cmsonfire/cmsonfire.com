@@ -31,12 +31,14 @@ const FooterSection = (props) => {
       <Box class="flex flex-row">
         <Box as="span" class="w-1/4"></Box>
         <SocialLink class="my-auto p-4" to={`https://twitter.com/3_alves`}>
-          <TwitterIcon class="fill-current text-gray-100 inline-block h-10 w-10" />
+          <TwitterIcon class="fill-current text-secondary-900 inline-block h-10 w-10" />
         </SocialLink>
         <SocialLink class="my-auto p-4" to={`https://github.com/talves`}>
-          <GitHubIcon class="fill-current text-gray-100 inline-block h-10 w-10" />
+          <GitHubIcon class="fill-current text-secondary-900 inline-block h-10 w-10" />
         </SocialLink>
-        <Box class="my-auto p-4 text-gray-100 inline-block">© Tony Alves</Box>
+        <Box class="my-auto p-4 text-secondary-900 font-bold inline-block">
+          © Tony Alves
+        </Box>
       </Box>
     </Box>
   );

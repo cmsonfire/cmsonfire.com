@@ -2,3 +2,20 @@
 #toast-page-section {
   @apply min-h-screen;
 }
+
+/* embossed bg logo */
+.box-background {
+  background-image: url("/cms-on-fire-emboss.svg");
+  background-size: 80px 90px;
+  background-repeat: repeat;
+}
+
+.footer-background {
+  height: 30rem;
+  /* filter: 'brightness(0.5) sepia(0.1) hue-rotate(20deg) saturate(5)'; */
+  background: url("/images/bottom-waves.svg"), url("/cms-on-fire-emboss.svg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover, 80px 90px;
+  /* background-position-x: center, 0;
+  background-position-y: bottom, 0; */
+}
