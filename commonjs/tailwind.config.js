@@ -73,7 +73,7 @@ module.exports = {
     },
     backgroundColor: (theme) => ({
       ...theme("colors"),
-      default: "#F8FCFF",
+      default: "#fff",
     }),
     boxShadow: {
       // xs: "0 0 0 1px rgba(0, 0, 0, 0.05)",
@@ -89,7 +89,7 @@ module.exports = {
       // "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       // "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
       inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.1)",
-      outline: "0 0 0 3px rgba(66, 153, 225, 0.5)",
+      outline: "0 0 0 3px rgba(0, 0, 0, 0.25)",
       focus: "0 0 0 3px rgba(66, 153, 225, 0.5)",
       none: "none",
     },
@@ -101,6 +101,8 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
+        md: "0 8px 15px -4px rgba(0, 0, 0, .25)",
+        lg: "0 15px 30px -8px rgba(0, 0, 0, .25)",
         huge: "0 30px 60px -15px rgba(0, 0, 0, .25)",
       },
     },

@@ -21,14 +21,7 @@ export default (props) => {
   return (
     <HeaderWrapper class="flex flex-row h-18 p-2 bg-transparent font-medium text-fire-900">
       <Box class="flex h-18">
-        <Box
-          as="a"
-          href="/"
-          class="w-16 h-16 flex-item border-solid border-2 border-fire-900"
-          style={{
-            borderRadius: "50%",
-          }}
-        >
+        <Box as="a" href="/" class="w-16 h-16 flex-item">
           <LogoIcon
             outerColor={theme.colors.fire["700"]}
             middleColor={theme.colors.fire["600"]}

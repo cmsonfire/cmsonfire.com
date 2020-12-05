@@ -17,7 +17,7 @@ export default (props) => {
         // filter: 'brightness(0.5) sepia(0.1) hue-rotate(20deg) saturate(5)',
         background: `url(/images/bottom-waves${
           colorMode === "dark" ? "-dark" : ""
-        }.svg), #fff`,
+        }.svg), transparent`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPositionX: "center",

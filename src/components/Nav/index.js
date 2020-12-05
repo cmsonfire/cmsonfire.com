@@ -4,7 +4,7 @@ import Nav from "./Nav.js";
 import NavItem from "./NavItem.js";
 import { useSiteData } from "../SiteDataProvider/index.js";
 
-export default function Navigation() {
+export default function Navigation(props) {
   const data = useSiteData();
   const { navigation = {} } = data;
 
@@ -20,6 +20,7 @@ export default function Navigation() {
               return <NavItem href={item.path}>{item.label}</NavItem>;
             })}
       </Nav>
+      {props.children}
     </Box>
   );
 }

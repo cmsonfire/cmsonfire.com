@@ -1,3 +1,4 @@
 import { h } from "preact";
+import Navigation from "../Nav/index.js";
 
-export default (props) => <div {...props}>{props.children}</div>;
+export default (props) => <Navigation {...props}>{props.children}</Navigation>;

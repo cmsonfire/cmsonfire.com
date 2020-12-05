@@ -5,7 +5,6 @@ import Header from "./header.js";
 import Main from "./main.js";
 import Footer from "./footer.js";
 import SEO from "../seo/index.js";
-import Navigation from "./navigation.js";
 
 export const FlexLayout = (props) => (
   <Box as="div" {...props}>
@@ -15,7 +14,7 @@ export const FlexLayout = (props) => (
 
 export default ({ children, ...props }) => {
   return (
-    <FlexLayout variant="styles.root">
+    <FlexLayout>
       <Helmet>
         <html lang="en" />
         <link
@@ -43,7 +42,6 @@ export default ({ children, ...props }) => {
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Helmet>
       <SEO pageMeta={props.meta} />
-      <Navigation />
       <Header header={props.header} />
       <Main {...props}>{children}</Main>
       <Footer />
