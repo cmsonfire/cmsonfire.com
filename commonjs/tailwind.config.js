@@ -23,10 +23,6 @@ module.exports = {
   //   "100": "#2b394d"
   // }
   theme: {
-    screens: {
-      tablet: "768px",
-      desktop: "1024px",
-    },
     colors: {
       transparent: "transparent",
       gray: {

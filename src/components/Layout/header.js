@@ -19,23 +19,23 @@ export const ThemeSwitcher = (props) => (
 export default (props) => {
   const theme = { colors };
   return (
-    <HeaderWrapper class="flex flex-row h-18 p-2 bg-transparent font-medium text-fire-900">
+    <HeaderWrapper class="relative flex flex-row h-18 p-2 bg-transparent font-medium text-fire-900">
       <Box class="flex h-18">
         <Box as="a" href="/" class="w-16 h-16 flex-item">
+          <Box
+            as="span"
+            class="absolute bottom-0 pl-16 pb-1 text-3xl font-medium my-auto italic text-fire"
+          >
+            {props.header}
+          </Box>
           <LogoIcon
             outerColor={theme.colors.fire["700"]}
             middleColor={theme.colors.fire["600"]}
             innerColor={theme.colors.fire["500"]}
           />
         </Box>
-        <Box
-          as="span"
-          class="pl-4 text-3xl font-medium my-auto italic text-fire"
-        >
-          {props.header}
-        </Box>
       </Box>
-      <Navigation />
+      <Navigation class="absolute top-0 right-0" />
       <Box class="float-right absolute right-0">
         <ThemeSwitcher displayMode={false} />
       </Box>

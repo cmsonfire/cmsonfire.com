@@ -13,16 +13,16 @@ const MainWrapper = (props) => (
 );
 
 const PageWrapper = (props) => (
-  <MainWrapper class="py-6 bg-default flex flex-col desktop:flex-row justify-center sm:py-12">
+  <MainWrapper class="py-6 bg-default flex md:flex-col lg:flex-row justify-center sm:py-12">
     <Container class="w-full">{props.children}</Container>
   </MainWrapper>
 );
 
 const ListPageWrapper = (props) => (
-  <MainWrapper class="py-6 bg-default flex flex-col desktop:flex-row justify-center sm:py-12">
-    <Box class="w-1/3">{/* Placeholder for sidebar */}</Box>
-    <Container class="w-1/3">{props.children}</Container>
-    <Box class="w-1/3">{/* Placeholder for sidebar */}</Box>
+  <MainWrapper class="py-6 bg-default flex md:flex-col lg:flex-row justify-center sm:py-12">
+    <Box class="w-full lg:w-1/4">{/* Placeholder for sidebar */}</Box>
+    <Container class="w-full lg:w-1/2">{props.children}</Container>
+    <Box class="w-full lg:w-1/4">{/* Placeholder for sidebar */}</Box>
   </MainWrapper>
 );
 

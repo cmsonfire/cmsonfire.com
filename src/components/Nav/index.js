@@ -9,7 +9,7 @@ export default function Navigation(props) {
   const { navigation = {} } = data;
 
   return (
-    <Box class="divide-y divide-gray-100">
+    <Box class={`divide-y divide-gray-100 ${props.class}`}>
       <Nav>
         {navigation.menu &&
           navigation.menu &&
