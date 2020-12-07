@@ -37,7 +37,7 @@ export default {
   publish_mode: "editorial_workflow",
   media_folder: "images",
   public_folder:
-    "//firebasestorage.googleapis.com/v0/b/garden-posts-demo.appspot.com/o/images",
+    "//firebasestorage.googleapis.com/v0/b/cms-on-fire.appspot.com/o/images",
   logo_src: "/logo192.png",
   load_config_file: false, // tells netlify-cms-app to ignore the config.yml
   collections: [
