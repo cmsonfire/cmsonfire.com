@@ -17,11 +17,11 @@ export default (props) => (
             .map(({ meta }, index) => (
               <li
                 key={index}
-                class="flex items-start shadow overflow-hidden border-b  text-secondary-500"
+                class="flex items-start shadow overflow-hidden border-b text-primary-800"
               >
                 <div class="flex items-center">
                   <a class="p-4" href={meta.slug}>
-                    <Box as="span" class="text-primary-600 text-lg font-medium">
+                    <Box as="span" class="text-primary-700 text-lg font-medium">
                       {meta.title}
                     </Box>
                   </a>

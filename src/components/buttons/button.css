@@ -16,22 +16,22 @@
   }
 
   .btn-primary {
-    @apply bg-primary-700 text-gray-100;
+    @apply bg-primary-900 text-gray-100;
   }
   .btn-primary:hover {
-    @apply bg-primary-500 text-gray-100;
+    @apply bg-primary-400 text-primary-900;
   }
   .btn-primary:active {
-    @apply bg-primary-700 text-gray-100;
+    @apply bg-primary-900 text-gray-100;
   }
 
   .btn-secondary {
-    @apply bg-secondary-700 text-gray-100;
+    @apply bg-secondary-900 text-gray-100;
   }
   .btn-secondary:hover {
-    @apply bg-secondary-500 text-gray-100;
+    @apply bg-secondary-400 text-secondary-900;
   }
   .btn-secondary:active {
-    @apply bg-secondary-700 text-gray-100;
+    @apply bg-secondary-900 text-gray-100;
   }
 }

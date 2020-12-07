@@ -23,5 +23,5 @@
 
 /* Header Bg */
 .bg-header {
-  @apply bg-gradient-to-r from-fire-500 to-fire-600 text-lg leading-5 font-bold text-secondary-800 p-4;
+  @apply bg-gradient-to-r from-fire-500 to-fire-600 text-lg leading-5 font-bold text-primary-900 p-4;
 }

@@ -7,7 +7,7 @@ export default (props) => (
     <Box class="flex items-center lg:flex-row md:flex-col py-16">
       <Box class="flex-col lg:w-1/2 md:w-full lg:p-16 md:p-1 ">
         <Box class="md:w-full m-auto bg-fire-100 p-10 shadow-md border-r-4">
-          <Box class="lg:text-5xl md:text-4xl text-fire-900 lg:leading-tight md:leading-none">
+          <Box class="lg:text-5xl md:text-4xl text-primary-800 lg:leading-tight md:leading-none">
             <Box class="font-bold">
               Tools to help you keep your content available
             </Box>
@@ -16,7 +16,7 @@ export default (props) => (
             Build your sites from any tool using the same data and content
           </Box>
           <Box class="p-5 pt-10">
-            <Button as="a" href="/#" class="btn btn-secondary m-0">
+            <Button as="a" href="/#" class="btn btn-primary m-0">
               {"Call to Action"}
             </Button>
           </Box>
