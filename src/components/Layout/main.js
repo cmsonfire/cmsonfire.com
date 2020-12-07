@@ -12,6 +12,8 @@ const MainWrapper = (props) => (
   </Box>
 );
 
+const AppWrapper = (props) => <Box>{props.children}</Box>;
+
 const PageWrapper = (props) => (
   <MainWrapper class="py-6 bg-default flex md:flex-col lg:flex-row justify-center sm:py-12">
     <Container class="w-full">{props.children}</Container>
@@ -39,6 +41,10 @@ export default (props) => {
     case "list-page":
     case "item-page":
       Wrapper = ListPageWrapper;
+      break;
+    case "app":
+      Wrapper = AppWrapper;
+      break;
   }
   return <Wrapper {...props} />;
 };
