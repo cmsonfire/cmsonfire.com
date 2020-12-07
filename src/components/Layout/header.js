@@ -1,7 +1,7 @@
 import { h } from "preact";
 import { Box } from "../box.js";
 import Navigation from "../Nav/index.js";
-import LogoIcon from "../icons/LogoIcon.js";
+import LogoIcon from "../icons/LogoIconGlow.js";
 import colors from "../../theme/colors.js";
 
 const HeaderWrapper = (props) => (
@@ -28,11 +28,7 @@ export default (props) => {
           >
             {props.header}
           </Box>
-          <LogoIcon
-            outerColor={theme.colors.fire["700"]}
-            middleColor={theme.colors.fire["600"]}
-            innerColor={theme.colors.fire["500"]}
-          />
+          <LogoIcon />
         </Box>
       </Box>
       <Navigation class="absolute top-0 right-0" />

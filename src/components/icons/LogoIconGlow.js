@@ -1,12 +1,13 @@
 import { h } from "preact";
 import { Box } from "../box.js";
 
-const LogoIcon = (props) => {
+const LogoIconGlow = (props) => {
   const {
     css,
     rotate = 0,
-    outerColor = "#f57c00",
-    middleColor = "#ffca28",
+    outerColor = "#F57C00",
+    middleGColor = "#FFA000",
+    middleColor = "#FFCA28",
     innerColor = "#FAF089",
   } = props;
   const rotateDeg = `rotate(${parseInt(rotate)})`;
@@ -20,9 +21,16 @@ const LogoIcon = (props) => {
       transform={rotateDeg}
       ariaHidden="true"
     >
+      <linearGradient id="gradient">
+        <stop offset="0" stop-color={outerColor} />
+        <stop offset=".1" stop-color={middleGColor} />
+        <stop offset=".6" stop-color={middleColor} />
+        <stop offset=".9" stop-color={middleGColor} />
+        <stop offset="1" stop-color={outerColor} />
+      </linearGradient>
       <path
         id="outer"
-        fill={outerColor}
+        fill="url(#gradient)"
         d="M341.483 38.167c73.182 166.066-325.156 328.744-144.246 490.286 61.531 54.943 211.178 57.496 238.165-37.795 19.142-67.599-61.998-202.006 33.751-235.66-26.748-9.946-47.976 6.653-61.751 27.971-25.555 36.363-16.478-57.506-16.478-57.506s13.335-147.669-49.441-187.296z"
       />
       <path
@@ -39,4 +47,4 @@ const LogoIcon = (props) => {
   );
 };
 
-export default LogoIcon;
+export default LogoIconGlow;
