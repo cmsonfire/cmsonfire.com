@@ -7,8 +7,8 @@ import path from "path";
 export const sourceData = async ({ setDataForSlug }) => {
   const app = await getApp({
     projectName: "cms-on-fire",
-    // authPath: path.join(process.cwd(), "./cms/service-account-key.js"),
-    authPath: path.join(process.cwd(), "./cms/firebase-admin-key.js"), // local key file not using env
+    authPath: path.join(process.cwd(), "./cms/service-account-key.js"),
+    // authPath: path.join(process.cwd(), "./cms/firebase-admin-key.js"), // local key file not using env
   });
 
   const settings = await getCollectionFiles(app, {
