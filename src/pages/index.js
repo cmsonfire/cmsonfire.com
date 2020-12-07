@@ -6,7 +6,7 @@ export default (props) => (
   <Box class="min-h-full">
     <Box class="flex items-center lg:flex-row md:flex-col py-16">
       <Box class="flex-col lg:w-1/2 md:w-full lg:p-16 md:p-1 ">
-        <Box class="md:w-full m-auto bg-fire-200 bg-opacity-50 p-10 shadow-md border-r-4">
+        <Box class="md:w-full m-auto bg-fire-100 p-10 shadow-md border-r-4">
           <Box class="lg:text-5xl md:text-4xl text-fire-900 lg:leading-tight md:leading-none">
             <Box class="font-bold">
               Tools to help you keep your content available
