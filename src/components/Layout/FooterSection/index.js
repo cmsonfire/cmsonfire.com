@@ -38,15 +38,15 @@ const FooterSection = (props) => {
           class="my-auto p-4"
           to={`https://twitter.com/${siteMetadata.twitterUsername || ""}`}
         >
-          <TwitterIcon class="fill-current text-secondary-900 inline-block h-10 w-10" />
+          <TwitterIcon class="fill-current text-secondary-700 inline-block h-10 w-10" />
         </SocialLink>
         <SocialLink
           class="my-auto p-4"
           to={`https://github.com/${siteMetadata.githubUsername || ""}`}
         >
-          <GitHubIcon class="fill-current text-secondary-900 inline-block h-10 w-10" />
+          <GitHubIcon class="fill-current text-secondary-700 inline-block h-10 w-10" />
         </SocialLink>
-        <Box class="my-auto p-4 text-secondary-900 font-bold inline-block">
+        <Box class="my-auto p-4 text-secondary-800 font-bold inline-block">
           © {footer.copyright}
         </Box>
       </Box>

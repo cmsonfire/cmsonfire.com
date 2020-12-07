@@ -6,10 +6,7 @@ export default (props) => {
   const data = useSiteData();
   return (
     <Box>
-      <Box
-        as="div"
-        class="text-lg bg-primary-900 leading-5 font-medium text-secondary-100 p-4"
-      >
+      <Box as="div" class="bg-header">
         Site Data JSON
       </Box>
       <pre>{JSON.stringify(data, null, 2)}</pre>
