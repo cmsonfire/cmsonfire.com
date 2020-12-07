@@ -1,7 +1,6 @@
 import { h } from "preact";
 import { Box } from "../box.js";
 import Navigation from "../Nav/index.js";
-import colors from "../../theme/colors.js";
 
 const HeaderWrapper = (props) => (
   <Box as="header" {...props}>
@@ -16,7 +15,6 @@ export const ThemeSwitcher = (props) => (
 );
 
 export default (props) => {
-  const theme = { colors };
   return (
     <HeaderWrapper class="relative flex flex-row h-18 p-2 bg-transparent font-medium text-fire-900">
       <Box class="flex h-18">
