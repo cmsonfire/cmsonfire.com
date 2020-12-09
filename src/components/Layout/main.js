@@ -12,7 +12,11 @@ const MainWrapper = (props) => (
   </Box>
 );
 
-const AppWrapper = (props) => <Box>{props.children}</Box>;
+const AppWrapper = ({ children, ...props }) => (
+  <Box as="main" {...props}>
+    {children}
+  </Box>
+);
 
 const PageWrapper = (props) => (
   <MainWrapper class="py-6 bg-default flex md:flex-col lg:flex-row justify-center sm:py-12">
@@ -30,7 +34,7 @@ const ListPageWrapper = (props) => (
 
 export default (props) => {
   /* Determine if this is a page, list-page, item-page */
-  const { props: childProps } = props.children;
+  const { props: childProps = {} } = props.children;
   let type = childProps.type || "page"; //default
   if (childProps.meta && !childProps.type)
     type = childProps.meta.type || "item-page";
@@ -46,5 +50,6 @@ export default (props) => {
       Wrapper = AppWrapper;
       break;
   }
+
   return <Wrapper {...props} />;
 };

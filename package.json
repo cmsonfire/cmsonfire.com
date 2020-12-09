@@ -14,10 +14,10 @@
     "build": "yarn build:css && yarn build:toast",
     "build:files": "yarn postinstall && yarn cms -m && yarn build",
     "build:css": "postcss --config commonjs src/index.css -o public/styles.css",
-    "cms": "cmsonfire import cms-on-fire -o . -c ./cms/config.js -v -F",
-    "cms:env": "cmsonfire import cms-on-fire -k ./cms/service-account-key.js -o . -c ./cms/config.js -v -F",
-    "cms:key": "cmsonfire import cms-on-fire -k ./cms/firebase-admin-key.js -o . -c ./cms/config.js -v -F",
-    "export:cms": "cmsonfire export cms-on-fire -k ./cms/firebase-admin-key.js -c ./cms/config.js"
+    "cms": "cmsonfire import cms-on-fire -o . -c ./cms/src/config.js -v -F",
+    "cms:env": "cmsonfire import cms-on-fire -k ./cms/service-account-key.js -o . -c ./cms/src/config.js -v -F",
+    "cms:key": "cmsonfire import cms-on-fire -k ./cms/firebase-admin-key.js -o . -c ./cms/src/config.js -v -F",
+    "export:cms": "cmsonfire export cms-on-fire -k ./cms/firebase-admin-key.js -c ./cms/src/config.js"
   },
   "dependencies": {
     "@cmsonfire/cli": "^0.1.2",
@@ -50,6 +50,10 @@
       "preact"
     ]
   },
+  "workspaces": [
+    "cms",
+    "."
+  ],
   "devDependencies": {
     "browser-sync": "^2.26.13",
     "execa": "^4.1.0",

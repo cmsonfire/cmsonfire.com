@@ -1,0 +1,48 @@
+{
+  "name": "netlify-cms-mdx",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@cmsonfire/cli": "^0.1.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "firebase-react-provider": "^0.1.6",
+    "netlify-cms-app": "^2.14.4",
+    "netlify-cms-backend-firestore": "^0.1.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "^3.4.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "import:cms": "cmsonfire import cms-on-fire -k ./firebase-admin-key.js -o . -c ./src/config.js -v -F",
+    "export:cms": "cmsonfire export cms-on-fire -k ./firebase-admin-key.js -c ./src/config.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      "last 2 Chrome versions",
+      "last 2 Opera versions",
+      "last 2 Firefox versions",
+      "last 2 Edge versions",
+      "last 2 Safari versions",
+      "last 2 iOS versions",
+      "last 2 ChromeAndroid versions"
+    ],
+    "development": [
+      "last 2 Chrome versions",
+      "last 2 Opera versions",
+      "last 2 Firefox versions",
+      "last 2 Edge versions",
+      "last 2 Safari versions",
+      "last 2 iOS versions",
+      "last 2 ChromeAndroid versions"
+    ]
+  }
+}
