@@ -1,0 +1,8 @@
+{
+  "name": "@cmsonfire/cms-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "index.js",
+  "license": "MIT",
+  "type": "module"
+}
