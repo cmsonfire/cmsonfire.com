@@ -7,7 +7,7 @@ import path from "path";
 export const sourceData = async ({ setDataForSlug }) => {
   const app = await getApp({
     projectName: "cms-on-fire",
-    authPath: path.join(process.cwd(), "./cms/service-account-key.js"),
+    authPath: path.join(process.cwd(), "./cms-config/service-account-key.js"),
     // authPath: path.join(process.cwd(), "./cms/firebase-admin-key.js"), // local key file not using env
   });
 
@@ -119,6 +119,11 @@ export const sourceData = async ({ setDataForSlug }) => {
 
 //   await setDataForSlug("/posts", {
 //     data: { posts: allMdx },
+//   });
+
+//   /* data for admin app */
+//   await setDataForSlug("/admin", {
+//     data: { type: "app" },
 //   });
 //   return;
 // };
