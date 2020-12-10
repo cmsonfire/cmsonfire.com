@@ -35,6 +35,7 @@
   "snowpack": {
     "exclude": [
       "cms/**",
+      "cms-config/**",
       "public/**",
       "gulpfile.js",
       "stylelint.config.js",
