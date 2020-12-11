@@ -1,6 +1,6 @@
 node_modules/
 /public/
-firebase-admin-key.js
+firebase-admin-key.*
 .tmp/
 
 # content; data;
