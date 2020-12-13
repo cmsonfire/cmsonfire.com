@@ -1,6 +1,6 @@
 import { h } from "preact";
 import { Box, Nav } from "components";
-import { useSiteData } from "../SiteDataProvider/index.js";
+import { useSiteData } from "../../site-data-provider.js";
 
 export default function Navigation(props) {
   const data = useSiteData();

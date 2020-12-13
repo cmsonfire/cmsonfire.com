@@ -1,7 +1,7 @@
 import { h } from "preact";
 import { Box } from "../../box.js";
 import { Button } from "../../buttons/Button.js";
-import { useSiteData } from "../../SiteDataProvider/index.js";
+import { useSiteData } from "../../../site-data-provider.js";
 
 import TwitterIcon from "../../icons/social/twitter-icon.js";
 import GitHubIcon from "../../icons/social/github-icon.js";

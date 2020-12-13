@@ -1,5 +1,5 @@
 import { h } from "preact";
-import { useSiteData } from "../../SiteDataProvider/index.js";
+import { useSiteData } from "../../../site-data-provider.js";
 
 export const useSiteMetadata = () => {
   const siteData = useSiteData();

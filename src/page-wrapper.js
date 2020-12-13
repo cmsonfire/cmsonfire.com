@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import { Box } from "./components/box.js";
 import Layout from "./components/Layout/index.js";
 import OutsideLink from "./components/outside-link.js";
-import { SiteDataProvider } from "./components/SiteDataProvider/index.js";
+import { SiteDataProvider } from "./site-data-provider.js";
 // import Thing from "../src/components/a-thing.js";
 
 // original: https://github.com/toastdotdev/toast-tools/blob/main/packages/mdx/examples/dynamic-import/src/page-wrapper.js

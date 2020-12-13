@@ -1,6 +1,6 @@
 import { h } from "preact";
 import { Box } from "../components/box.js";
-import { useSiteData } from "../components/SiteDataProvider/index.js";
+import { useSiteData } from "../site-data-provider.js";
 
 export default (props) => {
   const data = useSiteData();
