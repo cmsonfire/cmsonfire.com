@@ -9,7 +9,8 @@
   "scripts": {
     "clean": "rm -rf ./.tmp && rm -rf ./public",
     "start": "NODE_ENV=production yarn gulp",
-    "postinstall": "breadbox --dest public/web_modules",
+    "postinstall": "yarn build:components && breadbox --dest public/web_modules",
+    "build:components": "yarn workspace components build",
     "build:toast": "toast incremental .",
     "build": "yarn build:css && yarn build:toast",
     "build:files": "yarn postinstall && yarn cms -m && yarn build",
