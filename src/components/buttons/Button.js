@@ -1,6 +1,6 @@
 import { h } from "preact";
 import { forwardRef } from "preact/compat";
-import { Box } from "../box.js";
+import { Box } from "components";
 
 // export const Button = forwardRef(({ as = "button", ...props }, ref) => (
 //   <Box class="cmp-btn">

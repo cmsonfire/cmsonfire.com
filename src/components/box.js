@@ -1,6 +1,3 @@
-import { h } from "preact";
-import { forwardRef } from "preact/compat";
+import { Box } from "components";
 
-export const Box = forwardRef(({ as = "div", children, ...props }, ref) => {
-  return h(as, { ref: { ref }, ...props }, children);
-});
+export { Box };

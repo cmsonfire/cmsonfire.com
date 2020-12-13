@@ -1,5 +1,6 @@
-import { h } from "preact";
-import { Box } from "../box.js";
+import React, { createElement } from "react";
+import { Box } from "../Box.js";
+
 export default function NavItem({ href, isActive, children }) {
   return (
     <Box as="li">
