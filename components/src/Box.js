@@ -1,5 +1,5 @@
-import React, { forwardRef, createElement } from "react";
+import React, { createElement } from "react";
 
-export const Box = forwardRef(({ as = "div", children, ...props }, ref) => {
-  return createElement(as, { ref: { ref }, ...props }, children);
-});
+export const Box = ({ as = "div", children, ...props }) => {
+  return createElement(as, props, children);
+};

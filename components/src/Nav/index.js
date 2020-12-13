@@ -7,15 +7,19 @@ const Navigation = (props) => {
   const data = props.data;
 
   return (
-    <Box class={`divide-y divide-gray-100 ${props.class}`}>
+    <Box className={`divide-y divide-gray-100 ${props.class}`}>
       <Nav>
         {data.menu &&
           data.menu &&
           data.menu.items &&
           data.menu.items
             .filter((k) => !k.hidden)
-            .map((item) => {
-              return <NavItem href={item.path}>{item.label}</NavItem>;
+            .map((item, index) => {
+              return (
+                <NavItem key={index} href={item.path}>
+                  {item.label}
+                </NavItem>
+              );
             })}
       </Nav>
       {props.children}

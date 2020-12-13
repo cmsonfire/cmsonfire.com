@@ -7,7 +7,7 @@ export default function NavItem({ href, isActive, children }) {
       <Box
         as="a"
         href={href}
-        class={`block px-4 py-2 rounded-md ${isActive ? "text-fire" : ""}`}
+        className={`block px-4 py-2 rounded-md ${isActive ? "text-fire" : ""}`}
       >
         {children}
       </Box>

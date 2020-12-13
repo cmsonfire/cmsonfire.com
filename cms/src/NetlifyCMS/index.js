@@ -1,6 +1,7 @@
 import React from "react";
 import CMS from "netlify-cms-app";
 import { NetlifyCmsBackendFirestore } from "netlify-cms-backend-firestore";
+import NavigationPreview from "./components/NavigationPreview";
 // import previewStyles from "./components/previewStyles";
 // import PostPreview from "./components/PostPreview";
 // import AuthorsPreview from "./components/AuthorsPreview";
@@ -20,6 +21,7 @@ const NetlifyCMS = () => {
     //     url: "http://localhost:3000/api/v1",
     //   };
     // }
+    CMS.registerPreviewTemplate("menu", NavigationPreview);
     // CMS.registerPreviewTemplate("posts", PostPreview);
     // CMS.registerPreviewStyle(previewStyles, { raw: true });
     // CMS.registerPreviewTemplate("authors", AuthorsPreview);
@@ -30,7 +32,7 @@ const NetlifyCMS = () => {
     //   "relation",
     //   RelationKitchenSinkPostPreview
     // );
-
+    CMS.registerPreviewStyle("/styles.css");
     CMS.init({ config });
   }, []);
 
