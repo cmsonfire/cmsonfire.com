@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "CMS on Fire",
+  "name": "CMS on Fire's own cms on Firestore using NetlifyCMS",
   "icons": [
     {
       "src": "favicon.ico",
