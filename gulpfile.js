@@ -26,6 +26,7 @@ async function css() {
     ["--config", "commonjs", "src/index.css", "-o", "public/styles.css"],
     { stdio }
   );
+  await execa("yarn", ["copy:css"], { stdio });
   browserSync.reload("*.css");
 }
 

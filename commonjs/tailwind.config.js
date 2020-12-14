@@ -5,7 +5,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: ["./src/**/*.js"],
+  purge: ["./src/**/*.js", "./components/src/**/*.js"],
   // https://www.colorbox.io/#steps=11#hue_start=207#hue_end=293#hue_curve=easeInQuad#sat_start=2#sat_end=90#sat_curve=easeOutQuad#sat_rate=130#lum_start=100#lum_end=53#lum_curve=easeOutQuad#lock_hex=2b394d#minor_steps_map=0
 
   // {

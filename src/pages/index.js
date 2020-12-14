@@ -1,6 +1,5 @@
 import { h } from "preact";
-import { Box } from "../components/box.js";
-import { Button } from "../components/index.js";
+import { Box, Button } from "components";
 
 export default (props) => (
   <Box class="min-h-full">

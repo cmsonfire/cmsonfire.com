@@ -2,9 +2,8 @@ import { h } from "preact";
 import { useRef, useState } from "preact/hooks";
 import { MDXProvider } from "@mdx-js/preact";
 import { Helmet } from "react-helmet";
-import { Box } from "./components/box.js";
+import { Box, OutsideLink } from "components";
 import Layout from "./components/Layout/index.js";
-import OutsideLink from "./components/outside-link.js";
 import { SiteDataProvider } from "./site-data-provider.js";
 // import Thing from "../src/components/a-thing.js";
 

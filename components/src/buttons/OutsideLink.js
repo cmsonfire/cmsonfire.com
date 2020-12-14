@@ -1,8 +1,8 @@
-import { h } from "preact";
-import { Box } from "./box.js";
-import { Button } from "./buttons/Button.js";
+import { createElement } from "react";
+import { Box } from "../Box.js";
+import { Button } from "./Button.js";
 
-const OutsideLink = ({
+export const OutsideLink = ({
   as = "span",
   to = "#",
   children,
@@ -40,5 +40,3 @@ const OutsideLink = ({
     );
   }
 };
-
-export default OutsideLink;

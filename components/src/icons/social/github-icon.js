@@ -1,5 +1,5 @@
-import { h } from "preact";
-import { Box } from "../../box.js";
+import { createElement } from "react";
+import { Box } from "../../Box.js";
 
 const GitHubIcon = (props) => {
   return (

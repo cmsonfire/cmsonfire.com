@@ -1,5 +1,5 @@
 import { h } from "preact";
-import { Box } from "../box.js";
+import { Box } from "components";
 
 const LogoIcon = (props) => {
   const {

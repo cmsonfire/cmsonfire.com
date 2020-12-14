@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav } from "components";
+import { Box, Nav, NavigationBar } from "components";
 
 const NavigationPreview = ({ entry, widgetFor }) => {
   const [data, setData] = React.useState({});
@@ -12,7 +12,11 @@ const NavigationPreview = ({ entry, widgetFor }) => {
 
   return (
     <React.Fragment>
-      <Nav data={data} />
+      <NavigationBar header="Site Title">
+        <Box className={`divide-y divide-gray-100 absolute top-0 right-0`}>
+          <Nav data={data} />
+        </Box>
+      </NavigationBar>
     </React.Fragment>
   );
 };

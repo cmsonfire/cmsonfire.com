@@ -1,10 +1,9 @@
-import { h } from "preact";
-import { Box } from "../../box.js";
-import { Button } from "../../buttons/Button.js";
-import { useSiteData } from "../../../site-data-provider.js";
+import { createElement } from "react";
+import { Box } from "../Box.js";
+import { Button } from "../buttons/Button.js";
 
-import TwitterIcon from "../../icons/social/twitter-icon.js";
-import GitHubIcon from "../../icons/social/github-icon.js";
+import TwitterIcon from "../icons/social/twitter-icon.js";
+import GitHubIcon from "../icons/social/github-icon.js";
 
 const SocialLink = ({
   as = "span",
@@ -27,8 +26,8 @@ const SocialLink = ({
 };
 
 const FooterSection = (props) => {
-  const data = useSiteData();
-  const { footer = {}, "site-metadata": siteMetadata = {} } = data;
+  const data = props.data || {};
+  const { footer = {}, siteMetadata = {} } = data;
 
   return (
     <Box>

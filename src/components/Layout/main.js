@@ -1,5 +1,5 @@
 import { h } from "preact";
-import { Box } from "../box.js";
+import { Box } from "components";
 import Container from "./container.js";
 
 const MainWrapper = (props) => (

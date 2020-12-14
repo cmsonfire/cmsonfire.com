@@ -1,5 +1,5 @@
 import { h } from "preact";
-import { Box } from "../box.js";
+import { Box } from "components";
 import { Helmet } from "react-helmet";
 import Header from "./header.js";
 import Main from "./main.js";

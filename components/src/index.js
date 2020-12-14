@@ -1,4 +1,14 @@
+/* Components */
 import { Box } from "./Box.js";
-import Nav from "./Nav";
+import { Button } from "./buttons/Button.js";
+import { OutsideLink } from "./buttons/OutsideLink.js";
 
-export { Box, Nav };
+/* Navigation */
+import Nav from "./Nav";
+import NavigationBar from "./NavigationBar";
+
+/* Footer */
+import Footer from "./Footer";
+import FooterSection from "./Footer/FooterSection.js";
+
+export { Box, Button, OutsideLink, Nav, NavigationBar, Footer, FooterSection };

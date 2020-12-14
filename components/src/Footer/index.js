@@ -1,6 +1,5 @@
-import { h } from "preact";
-import { Box } from "components";
-import FooterSection from "./footer-section.js";
+import { createElement } from "react";
+import { Box } from "../Box.js";
 
 const FooterWrapper = (props) => (
   <Box as="footer" {...props} class="w-full flex flex-col footer-background">
@@ -9,9 +8,5 @@ const FooterWrapper = (props) => (
 );
 
 export default (props) => {
-  return (
-    <FooterWrapper>
-      <FooterSection />
-    </FooterWrapper>
-  );
+  return <FooterWrapper>{props.children}</FooterWrapper>;
 };
