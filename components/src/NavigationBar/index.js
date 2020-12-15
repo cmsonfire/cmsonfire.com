@@ -1,11 +1,13 @@
 import { createElement } from "react";
 import { Box } from "../Box.js";
 
-const NavigationBarWrapper = (props) => (
-  <Box as="header" {...props} className={props.className}>
-    {props.children}
-  </Box>
-);
+const NavigationBarWrapper = (props) => {
+  return (
+    <Box as="header" {...props} className={props.className}>
+      {props.children}
+    </Box>
+  );
+};
 
 export const ThemeSwitcher = (props) => (
   <Box as="div" {...props}>

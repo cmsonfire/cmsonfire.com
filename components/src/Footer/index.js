@@ -2,8 +2,12 @@ import { createElement } from "react";
 import { Box } from "../Box.js";
 
 const FooterWrapper = (props) => (
-  <Box as="footer" {...props} class="w-full flex flex-col footer-background">
-    <Box class="overflow-x-auto my-auto">{props.children}</Box>
+  <Box
+    as="footer"
+    {...props}
+    className="w-full flex flex-col footer-background"
+  >
+    <Box className="overflow-x-auto my-auto">{props.children}</Box>
   </Box>
 );
 

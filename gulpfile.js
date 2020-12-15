@@ -23,7 +23,15 @@ function clean(cb) {
 async function css() {
   await execa(
     "postcss",
-    ["--config", "commonjs", "src/index.css", "-o", "public/styles.css"],
+    [
+      "--config",
+      "commonjs",
+      "src/index.css",
+      "-o",
+      "public/styles.css",
+      "--env",
+      "production",
+    ],
     { stdio }
   );
   await execa("yarn", ["copy:css"], { stdio });

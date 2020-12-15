@@ -31,21 +31,21 @@ const FooterSection = (props) => {
 
   return (
     <Box>
-      <Box class="flex flex-row">
-        <Box as="span" class="w-1/4"></Box>
+      <Box className="flex flex-row">
+        <Box as="span" className="w-1/4"></Box>
         <SocialLink
-          class="my-auto p-4"
+          className="my-auto p-4"
           to={`https://twitter.com/${siteMetadata.twitterUsername || ""}`}
         >
-          <TwitterIcon class="fill-current text-primary-100 inline-block h-10 w-10" />
+          <TwitterIcon className="fill-current text-primary-100 inline-block h-10 w-10" />
         </SocialLink>
         <SocialLink
-          class="my-auto p-4"
+          className="my-auto p-4"
           to={`https://github.com/${siteMetadata.githubUsername || ""}`}
         >
-          <GitHubIcon class="fill-current text-primary-100 inline-block h-10 w-10" />
+          <GitHubIcon className="fill-current text-primary-100 inline-block h-10 w-10" />
         </SocialLink>
-        <Box class="my-auto p-4 text-primary-800 font-bold inline-block">
+        <Box className="my-auto p-4 text-primary-800 font-bold inline-block">
           © {footer.copyright}
         </Box>
       </Box>

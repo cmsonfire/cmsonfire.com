@@ -7,7 +7,6 @@ const NavigationPreview = ({ entry, widgetFor }) => {
   React.useEffect(() => {
     const menu = entry.getIn(["data"]).toJS();
     setData({ menu });
-    console.log("data", menu);
   }, [entry]);
 
   return (

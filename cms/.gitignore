@@ -4,6 +4,8 @@
 garden-key.*
 /orig
 
+.eslintcache
+
 # dependencies
 /node_modules
 /.pnp
