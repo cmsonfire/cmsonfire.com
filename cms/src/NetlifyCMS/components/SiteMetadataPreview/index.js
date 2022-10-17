@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Nav, NavigationBar, Footer, FooterSection } from "components";
+import { Box, Nav, NavigationBar, Footer, FooterSection } from "@cmsonfire/components";
 
 const SiteMetadataPreview = ({ entry, widgetFor }) => {
   const [data, setData] = React.useState({});

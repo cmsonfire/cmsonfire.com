@@ -1,6 +1,8 @@
 import { h } from "preact";
-import { Box, NavigationBar } from "components";
-import Navigation from "../Nav/index.js";
+import { Box } from "../Box.js";
+import NavigationBar from "../NavigationBar/index.js";
+import Navigation from "../Navigation/index.js";
+import { useState } from "preact/hooks";
 
 const HeaderWrapper = (props) => (
   <Box as="header" {...props}>
@@ -14,10 +16,11 @@ export const ThemeSwitcher = (props) => (
   </Box>
 );
 
-export default (props) => {
+export default ({data={}, ...props}) => {
+  const [onOff, setOnOff] = useState(false);
   return (
-    <NavigationBar {...props}>
-      <Navigation class="absolute top-0 right-0" />
+    <NavigationBar {...props} onToggle={setOnOff}>
+      <Navigation class="right-8" data={data} toggle={onOff} />
     </NavigationBar>
   );
 };

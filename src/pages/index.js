@@ -1,7 +1,8 @@
 import { h } from "preact";
-import { Box, Button } from "components";
+import { Box } from "../components/index.js";
+import { Button } from "../components/Buttons/Button.js";
 
-export default (props) => (
+export default ({ children, ...props }) => (
   <Box class="min-h-full">
     <Box class="flex items-center lg:flex-row md:flex-col py-16">
       <Box class="flex-col lg:w-1/2 md:w-full lg:p-16 md:p-1 ">
@@ -11,7 +12,7 @@ export default (props) => (
               Tools to help you keep your content available
             </Box>
           </Box>
-          <Box class="text-2xl text-gray-900">
+          <Box class="text-2xl text-fire-900">
             Build your sites from any tool using the same data and content
           </Box>
           <Box class="p-5 pt-10">
@@ -21,8 +22,8 @@ export default (props) => (
           </Box>
         </Box>
       </Box>
-      <Box class="flex-col lg:w-1/2 md:w-full lg:p-32 md:p-20 h-full box-background">
-        <Box class="w-full text-center text-2xl text-gray-900">
+      <Box class="flex-col lg:w-1/2 md:w-full lg:p-32 md:p-20 h-full box-background bg-fire-200 dark:bg-fire-800">
+        <Box class="w-full text-center text-2xl text-fire-900">
           Using the open source examples in the project, you can move your
           content from your repository into a location where it can be accessed
           by multiple sources.

@@ -1,5 +1,5 @@
 import { h } from "preact";
-import { Box } from "components";
+import { Box } from "../Box.js";
 import Container from "./container.js";
 
 const MainWrapper = (props) => (
@@ -19,16 +19,16 @@ const AppWrapper = ({ children, ...props }) => (
 );
 
 const PageWrapper = (props) => (
-  <MainWrapper class="py-6 bg-default flex md:flex-col lg:flex-row justify-center sm:py-12">
+  <MainWrapper class="flex md:flex-col lg:flex-row justify-center bg-default dark:bg-primary-700 dark:text-secondary-300">
     <Container class="w-full">{props.children}</Container>
   </MainWrapper>
 );
 
 const ListPageWrapper = (props) => (
-  <MainWrapper class="py-6 bg-default flex md:flex-col lg:flex-row justify-center sm:py-12">
-    <Box class="w-full lg:w-1/4">{/* Placeholder for sidebar */}</Box>
-    <Container class="w-full lg:w-1/2">{props.children}</Container>
-    <Box class="w-full lg:w-1/4">{/* Placeholder for sidebar */}</Box>
+  <MainWrapper class="min-h-screen flex  justify-center dark:bg-fire-400">
+    <Box class="w-4 lg:w-1/4 md:w-2/12 sm:w-1/12 ">{/* Placeholder for sidebar */}</Box>
+    <Container class="w-full lg:2/4 md:w-8/12 sm:w-10/12">{props.children}</Container>
+    <Box class="w-4 lg:w-1/4 md:w-2/12 sm:w-1/12">{/* Placeholder for sidebar */}</Box>
   </MainWrapper>
 );
 

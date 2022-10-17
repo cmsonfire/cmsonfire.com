@@ -1,5 +1,5 @@
-import { jsx } from "react/jsx-runtime";
-import { createElement, forwardRef } from "react";
+import { h } from "preact";
+import { forwardRef } from "preact/compat";
 import { Box } from "../Box.js";
 
 export const Button = forwardRef(({ as = "button", ...props }, ref) => (

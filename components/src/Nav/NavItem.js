@@ -1,4 +1,5 @@
-import React, { createElement } from "react";
+import { jsx } from "react/jsx-runtime";
+import { createElement } from "react";
 import { Box } from "../Box.js";
 
 export default function NavItem({ href, isActive, children }) {

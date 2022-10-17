@@ -1,6 +1,5 @@
-import { jsx } from "react/jsx-runtime";
-import { createElement } from "react";
-import { Box } from "../../Box.js";
+import { h } from "preact";
+import { Box } from "../Box.js";
 
 const TwitterIcon = (props) => {
   return (

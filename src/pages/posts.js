@@ -1,5 +1,5 @@
 import { h } from "preact";
-import { Box } from "components";
+import { Box } from "../components/index.js";
 
 export default (props) => (
   <Box>

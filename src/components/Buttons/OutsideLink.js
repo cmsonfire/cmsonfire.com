@@ -1,5 +1,4 @@
-import { jsx } from "react/jsx-runtime";
-import { createElement } from "react";
+import { h } from "preact";
 import { Box } from "../Box.js";
 import { Button } from "./Button.js";
 

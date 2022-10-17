@@ -5,10 +5,6 @@ import Facebook from "./facebook.js";
 import SchemaOrg from "./schema-org.js";
 import { useSiteMetadata } from "./data/use-site-metadata.js";
 
-/* 
-https://tony.alves.dev/.netlify/functions/og-create/?ogpath=https://tony.alves.dev/og/&title=Read%20about%20the%20tech%20I%27m%20working%20on!&tag=site&tag=https://tony.alves.dev&name=Tony%20Alves&width=1024&height=542&mode=dark
-*/
-
 const SEO = ({ pageMeta = {} }) => {
   const {
     title = null,
@@ -20,7 +16,6 @@ const SEO = ({ pageMeta = {} }) => {
     organization = null,
     isArticle = false,
   } = pageMeta;
-
   const {
     title: defaultTitle,
     titleTemplate,
@@ -34,6 +29,7 @@ const SEO = ({ pageMeta = {} }) => {
     twitterCardType,
     facebookAppID,
   } = useSiteMetadata();
+
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
@@ -42,7 +38,6 @@ const SEO = ({ pageMeta = {} }) => {
     author: author || defaultAuthor,
     organization: organization || defaultOrganization || owner,
   };
-  // console.log('pageMeta', pageMeta, seo);
 
   return (
     <>

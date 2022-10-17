@@ -10,7 +10,7 @@ export default ({
 }) => (
   <Helmet>
     <meta name="twitter:card" content={cardType} />
-    {username && <meta name="twitter:creator" content={username} />}
+    {username && <meta name="twitter:creator" content={`@${username}`} />}
     {title && <meta name="twitter:title" content={title} />}
     {description && <meta name="twitter:description" content={description} />}
     {image && <meta name="twitter:image" content={image} />}

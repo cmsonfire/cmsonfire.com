@@ -2,7 +2,8 @@ import { h } from "preact";
 import { useRef, useState } from "preact/hooks";
 import { MDXProvider } from "@mdx-js/preact";
 import { Helmet } from "react-helmet";
-import { Box, OutsideLink } from "components";
+import { Box } from "./components/index.js";
+import { OutsideLink } from "./components/Buttons/OutsideLink.js";
 import Layout from "./components/Layout/index.js";
 import { SiteDataProvider } from "./site-data-provider.js";
 // import Thing from "../src/components/a-thing.js";
@@ -27,7 +28,7 @@ const EmailLink = ({ name = "me", rd = "example", tld = "com" }) => {
   );
 };
 
-const components = {
+const mdxComponents = {
   wrapper: (props) => <div class="p-4" {...props} />,
   Box,
   OutsideLink,
@@ -65,10 +66,21 @@ const components = {
   EmailLink,
   // Something: Thing,
 };
+
 export default ({ children, ...props }) => {
+  children.props.components = mdxComponents;
+  if (props?.components === undefined) {
+    props.components = mdxComponents;
+  }
+  // console.log(props?.components)
+
+  // if (props?.components == undefined) {
+  //   props.components = components;
+  // }
+  // console.log(`props: ${JSON.stringify(props, null, 2)}\n-------------========================--------------------\n`);
   return (
     <SiteDataProvider url="/settings.json">
-      <MDXProvider components={components}>
+      <MDXProvider components={mdxComponents}>
         <Layout header="CMS on Fire">{children}</Layout>
       </MDXProvider>
     </SiteDataProvider>

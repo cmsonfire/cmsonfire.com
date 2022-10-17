@@ -7,7 +7,7 @@ import {
   Nav,
   NavigationBar,
   Footer,
-} from "components";
+} from "@cmsonfire/components";
 
 const components = {
   // Import components for mdx

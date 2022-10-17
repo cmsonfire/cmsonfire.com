@@ -1,21 +1,22 @@
+import { jsx } from "react/jsx-runtime";
 import { createElement } from "react";
 import { Box } from "../Box.js";
 
-const NavigationBarWrapper = (props) => {
+const NavigationBarWrapper = ({ children, ...props }) => {
   return (
     <Box as="header" {...props} className={props.className}>
-      {props.children}
+      {children}
     </Box>
   );
 };
 
-export const ThemeSwitcher = (props) => (
+export const ThemeSwitcher = ({ children, ...props }) => (
   <Box as="div" {...props}>
-    {props.children}
+    {children}
   </Box>
 );
 
-const NavigationBar = (props) => {
+export const NavigationBar = ({ children, ...props }) => {
   return (
     <NavigationBarWrapper className="relative flex flex-row h-18 p-2 bg-transparent font-medium text-fire-900">
       <Box className="flex h-18">
@@ -28,12 +29,10 @@ const NavigationBar = (props) => {
           </Box>
         </Box>
       </Box>
-      {props.children}
+      {children}
       <Box className="float-right absolute right-0">
         <ThemeSwitcher displayMode={false} />
       </Box>
     </NavigationBarWrapper>
   );
 };
-
-export default NavigationBar;

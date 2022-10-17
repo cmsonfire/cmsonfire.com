@@ -9,8 +9,9 @@
   "scripts": {
     "clean": "rm -rf ./.tmp && rm -rf ./public",
     "start": "NODE_ENV=production yarn gulp",
-    "postinstall": "yarn build:components && breadbox --dest public/web_modules",
-    "build:components": "yarn workspace components build",
+    "_delete_postinstall": "yarn build:components && breadbox --dest public/web_modules",
+    "postinstall": "yarn build:components && node ./postinstall.js",
+    "build:components": "yarn workspace @cmsonfire/components build",
     "build:toast": "toast incremental .",
     "build:cms": "yarn build:css && yarn copy:css && yarn build:components && yarn workspace netlify-cms-mdx build",
     "build": "yarn build:css && yarn build:toast",
@@ -18,24 +19,24 @@
     "build:css": "postcss --config commonjs src/index.css -o public/styles.css --env production",
     "copy:css": "cp public/styles.css cms/public/styles.css",
     "cms": "cmsonfire import cms-on-fire -o . -c ./cms-config/index.js -v -F",
-    "cms:env": "cmsonfire import cms-on-fire -k ./cms-config/service-account-key.js -o . -c ./cms-config/index.js -v -F",
-    "cms:key": "cmsonfire import cms-on-fire -k ./cms-config/firebase-admin-key.js -o . -c ./cms-config/index.js -v -F",
+    "cms:env": "cmsonfire import cms-on-fire -k ./cms-config/service-account-key.js -o . -c ./cms-config/index.js -v -F -m",
+    "cms:key": "cmsonfire import cms-on-fire -k ./cms-config/firebase-admin-key.js -o . -c ./cms-config/index.js -v -F -m",
     "export:cms": "cmsonfire export cms-on-fire -k ./cms-config/firebase-admin-key.js -c ./cms-config/index.js"
   },
   "dependencies": {
     "@cmsonfire/cli": "^0.1.2",
-    "@mdx-js/preact": "^1.6.21",
-    "@sector/breadbox": "^0.0.4",
-    "@toastdotdev/mdx": "^0.1.5",
+    "@cmsonfire/components": "*",
+    "@mdx-js/preact": "^2.1.3",
+    "@toastdotdev/mdx": "^0.3.2",
     "cms-config": "*",
-    "components": "*",
-    "postcss": "^8.1.4",
-    "postcss-cli": "^8.1.0",
+    "esinstall": "1.1.7",
+    "postcss": "8.4.16",
+    "postcss-cli": "8.3.1",
     "postcss-import": "^13.0.0",
-    "preact": "^10.5.7",
+    "preact": "10.10.6",
     "react-helmet": "^6.1.0",
-    "tailwindcss": "^1.9.6",
-    "toast": "^0.3.40"
+    "tailwindcss": "^3.1.8",
+    "toast": "^0.5.4"
   },
   "snowpack": {
     "exclude": [

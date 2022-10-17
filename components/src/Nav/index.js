@@ -1,13 +1,14 @@
-import React, { createElement } from "react";
+import { jsx } from "react/jsx-runtime";
+import { createElement } from "react";
 import { Box } from "../Box.js";
 import Nav from "./Nav.js";
 import NavItem from "./NavItem.js";
 
-const Navigation = (props) => {
-  const data = props.data;
+export const Navigation = ({children, ...props}) => {
+  const {data = {}} = props;
 
   return (
-    <Box className={`divide-y divide-gray-100 ${props.class}`}>
+    <Box className={`divide-y divide-fire-100 ${props.class}`}>
       <Nav>
         {data.menu &&
           data.menu &&
@@ -22,9 +23,7 @@ const Navigation = (props) => {
               );
             })}
       </Nav>
-      {props.children}
+      {children}
     </Box>
   );
 };
-
-export default Navigation;

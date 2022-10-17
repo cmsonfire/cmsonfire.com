@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Nav, NavigationBar } from "components";
+import { Box, Nav, NavigationBar } from "@cmsonfire/components";
 
 const NavigationPreview = ({ entry, widgetFor }) => {
   const [data, setData] = React.useState({});

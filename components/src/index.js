@@ -4,8 +4,8 @@ import { Button } from "./buttons/Button.js";
 import { OutsideLink } from "./buttons/OutsideLink.js";
 
 /* Navigation */
-import Nav from "./Nav";
-import NavigationBar from "./NavigationBar";
+import { Navigation as Nav } from "./Nav";
+import { NavigationBar } from "./NavigationBar";
 
 /* Footer */
 import Footer from "./Footer";
