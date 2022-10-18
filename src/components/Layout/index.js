@@ -36,7 +36,7 @@ export const FlexLayout = (props) => {
 
 export default ({ children, ...props }) => {
   const data = useSiteData();
-
+console.log("useSiteData", data)
   return (
     <FlexLayout>
       <Helmet>
@@ -67,7 +67,7 @@ export default ({ children, ...props }) => {
       <SEO pageMeta={props?.meta} />
       <Header header={props.header} data={data?.navigation} />
       <Main {...props}>{children}</Main>
-      <Footer data={data?.navigation?.footer} />
+      <Footer data={data?.footer} />
     </FlexLayout>
   );
 };

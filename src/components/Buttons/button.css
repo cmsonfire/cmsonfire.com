@@ -4,7 +4,7 @@
   }
 
   .btn {
-    @apply py-2 px-4 rounded bg-fire-300 border-fire-900 text-fire-700 shadow-xl;
+    @apply py-2 px-4 rounded bg-fire-300 border-fire-900 text-fire-800 shadow-xl;
   }
 
   .btn:focus {

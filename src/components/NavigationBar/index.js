@@ -59,7 +59,7 @@ const MenuButton = (props) => {
 const NavigationBar = ({children, ...props}) => {
 
   return (
-    <NavigationBarWrapper as="header" className="bg-white text-fire-800 bg-fire-200 border-fire-200 px-2 sm:px-4 py-2.5 dark:bg-fire-800 dark:text-fire-300">
+    <NavigationBarWrapper as="header" className="bg-white text-fire-900 bg-fire-200 border-fire-200 px-2 sm:px-4 py-2.5 dark:bg-fire-800 dark:text-fire-300">
       <Box class="container flex justify-between items-center mx-auto">
         <Box as="a" href="/" class="flex items-center" aria-label="Site Root">
           <Box
